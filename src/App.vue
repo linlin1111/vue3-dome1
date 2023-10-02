@@ -2,6 +2,7 @@
   <div class="app">
     <counterView :counter="counter"></counterView>
     <buttonView :counter="counter" :pace="pace" @increment="increment"></buttonView>
+    <p>新增内容</p>
   </div>
 </template>
 
