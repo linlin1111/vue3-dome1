@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <p>dev</p>
+    <p>devmester</p>
     <!-- 显示数据组件 -->
     <counterView :num="num"></counterView>
     <!-- 显示按钮组件 -->
