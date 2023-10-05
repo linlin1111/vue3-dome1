@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <p>xiugaixiugai</p>
+    <p>v1</p>
     <!-- 显示数据组件 -->
     <counterView :num="num"></counterView>
     <!-- 显示按钮组件 -->
@@ -25,7 +25,7 @@ export default {
       num.value = newNum
     }
     return {
-      num,getNewNum
+      num,getNewNum,pace
     }
   }
 }
