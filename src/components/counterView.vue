@@ -1,19 +1,18 @@
 <template>
     <div>
-        {{ counter }}
+        {{ num }}
     </div>
 </template>
 
 <script>
 export default {
-    components: {},
-    props: {
-        counter: {
-            type: Number,
-            default: 0,
-            required: true
+    props:{
+        num :{
+            type:Number,
+            required:true,
+            default:200
         }
-    },
+    }
 }
 </script>
 <style scoped>

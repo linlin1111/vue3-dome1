@@ -1,35 +1,35 @@
 <template>
     <div>
-        <button @click="increment(mspace)">+</button>
-        <button @click='increment(-mspace)'>-</button>
+        <button @click="jisuan(pace)">+</button>
+        <button @click="jisuan(-pace)">-</button>
     </div>
 </template>
 
 <script>
-import {ref} from 'vue'
 export default {
-    components: {},
-    props:{
-        counter: {
-            type: Number,
-            default: 0,
-            required: true
-        },
-        pace:{
-            type: Number,
-            default: 0,
-            required: true
-        }
+   props:{
+    pace:{
+        type:Number,
+        required:true,
+        default:1
     },
-    setup(props,{emit}){
-        let mspace = ref(props.pace)
-        let mscounter = ref(props.counter)
-        const increment = (inc)=>{
-            mscounter.value+=inc
-            emit("increment",mscounter.value)
-        }
-        return {increment,mspace,mscounter}
+    num:{
+        type:Number,
+        required:true,
     }
+   },
+   setup(props,{emit}){
+    let newNum = 0
+    const jisuan = (pace)=>{
+        newNum = props.num+pace
+        emit('newNum',newNum)
+    }
+
+    return {
+        jisuan
+    }
+   }
+   
 }
 </script>
 <style scoped>

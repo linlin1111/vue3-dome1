@@ -1,8 +1,9 @@
 <template>
   <div class="app">
-    <counterView :counter="counter"></counterView>
-    <buttonView :counter="counter" :pace="pace" @increment="increment"></buttonView>
-    <p>新增内容</p>
+    <!-- 显示数据组件 -->
+    <counterView :num="num"></counterView>
+    <!-- 显示按钮组件 -->
+    <buttonView :num="num" :pace="pace" @newNum="getNewNum"></buttonView>
   </div>
 </template>
 
@@ -16,12 +17,15 @@ export default {
       buttonView
     },
   setup(){
-    let counter = ref(100);
-    let pace = ref(2);
-    const increment = (smcounter)=>{
-      counter.value = smcounter
+    let num = ref(150)
+    let pace = 2
+    const getNewNum = (newNum)=>{
+      console.log(newNum)
+      num.value = newNum
     }
-    return {counter,pace,increment}
+    return {
+      num,getNewNum,pace
+    }
   }
 }
 </script>
