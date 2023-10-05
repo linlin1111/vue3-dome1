@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <p>xiugaiaiai</p>
     <!-- 显示数据组件 -->
     <counterView :num="num"></counterView>
     <!-- 显示按钮组件 -->
