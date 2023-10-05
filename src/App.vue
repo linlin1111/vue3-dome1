@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <p>devmester</p>
+    <p class="main">mester</p>
     <!-- 显示数据组件 -->
     <counterView :num="num"></counterView>
     <!-- 显示按钮组件 -->
@@ -19,7 +19,7 @@ export default {
     },
   setup(){
     let num = ref(150)
-    let pace = 2
+    let pace = 2  
     const getNewNum = (newNum)=>{
       console.log(newNum)
       num.value = newNum
